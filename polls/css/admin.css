@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-size: 18px; /* Increase overall font size */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #e3f2fd;
+}
+
+.navbar-brand {
+    font-size: 1.6rem; /* Slightly increase the font size */
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Poll Styles */
+.polls-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Space between polls */
+}
+
+.poll-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure equal spacing above and below the card */
+.poll-card:not(:last-child) {
+    margin-bottom: 20px; /* This keeps consistent spacing below each card */
+}
+
+.poll-card h3 {
+    color: #444;
+    margin-bottom: 10px;
+    font-weight: bold; /* Make poll question bold */
+    font-size: 1.2rem; /* Increase font size */
+}
+
+/* Input and Voting Styles */
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1); /* Slightly enlarge radio buttons */
+}
+
+.vote-button {
+    padding: 10px 20px; /* Adjust padding to make the button narrower */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Remove fixed width */
+    font-size: 16px; /* Slightly increase font size */
+}
+
+.vote-button:hover {
+    background-color: #0056b3;
+}
+
+/* Voted Option Styling */
+.voted-option .form-check-label {
+    background-color: #d1ecf1;
+    border: 2px solid #0c5460;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    font-size: 1rem; /* Slightly increase font size */
+}
+
+/* Voted Message Style */
+.voted-message {
+    font-weight: bold;
+    font-style: italic;
+    color: #000;
+    margin-top: 10px;
+    font-size: 1rem; /* Slightly increase font size */
+}
+
+/* Label and Input Styling */
+label {
+    font-size: 1rem; /* Slightly increase font size */
+    display: flex;
+    align-items: center;
+}
+
+form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .polls-container {
+        grid-template-columns: 1fr;
+    }
+}
+.navbar {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bar-container {
+    height: 20px;
+    background-color: #e9ecef;
+    margin-bottom: 10px;
+}
+.bar {
+    height: 100%;
+    background-color: #007bff;
+}
+.poll-card {
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+.poll-card:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}

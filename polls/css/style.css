@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    font-size: 18px; /* Increase overall font size */
+    padding-top: 56px; /* Space for the fixed navbar */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #e3f2fd; /* Light blue background */
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.navbar-brand {
+    font-size: 1.6rem; /* Slightly increase the font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px; /* Max width for the main container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    background-color: white; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Poll Styles */
+.polls-container {
+    display: grid; /* Use grid layout for polls */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between poll cards */
+}
+
+.poll-card {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside poll cards */
+    background-color: #f9f9f9; /* Light gray background for poll cards */
+    display: flex; /* Flex layout for cards */
+    flex-direction: column; /* Vertical alignment */
+    justify-content: space-between; /* Space between elements */
+    height: 100%; /* Full height for cards */
+}
+
+.poll-card h3 {
+    color: #444; /* Darker text color */
+    margin-bottom: 10px; /* Space below title */
+    font-weight: bold; /* Make poll question bold */
+    font-size: 1.2rem; /* Increase font size */
+}
+
+/* Input and Voting Styles */
+input[type="radio"] {
+    margin-right: 10px; /* Space to the right of radio buttons */
+    transform: scale(1.1); /* Slightly enlarge radio buttons */
+}
+
+.vote-button {
+    padding: 10px 20px; /* Adjust padding */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    width: auto; /* Auto width for button */
+    font-size: 16px; /* Slightly increase font size */
+}
+
+.vote-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Voted Option Styling */
+.voted-option .form-check-label {
+    background-color: #d1ecf1; /* Light blue background for voted options */
+    border: 2px solid #0c5460; /* Darker border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding inside the label */
+    display: block; /* Block display for full width */
+    font-size: 1rem; /* Slightly increase font size */
+}
+
+/* Voted Message Style */
+.voted-message {
+    font-weight: bold; /* Bold text */
+    font-style: italic; /* Italic style */
+    color: #000; /* Black text */
+    margin-top: 10px; /* Space above the message */
+    font-size: 1rem; /* Slightly increase font size */
+}
+
+/* Label and Input Styling */
+label {
+    font-size: 1rem; /* Slightly increase font size */
+    display: flex; /* Flex layout for label */
+    align-items: center; /* Center align items */
+}
+
+form {
+    margin-top: 10px; /* Space above form */
+    display: flex; /* Flex layout for form */
+    flex-direction: column; /* Vertical alignment */
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .polls-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
